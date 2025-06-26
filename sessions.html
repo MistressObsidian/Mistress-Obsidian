@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sessions with Mistress Obsidian</title>
+  <style>
+    body { background:#0d0d0d; color:#e6e6e6; font-family:'Georgia', serif; margin:0; }
+    header { background:#990000; padding:20px; text-align:center; }
+    header h1 { color:#fff; margin:0; font-size:2.5em; }
+    .container { padding:30px; max-width:1100px; margin:auto; }
+    .session-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; }
+    .card { background:#1a1a1a; border-radius:10px; overflow:hidden; box-shadow:0 0 10px rgba(255,0,0,0.2); transition:transform .2s; }
+    .card:hover { transform:scale(1.03); }
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card-content { padding:18px 15px; }
+    .card-content h3 { color:#ff1a1a; margin:0 0 10px; }
+    .card-content p { margin:0 0 7px; color:#ddd; }
+    form { background:#1a1a1a; padding:30px; border-radius:10px; margin-top:50px; }
+    form h2 { color:#ff1a1a; }
+    label { display:block; margin-top:15px; color:#ccc; }
+    input, select, textarea { width:100%; padding:10px; margin-top:5px; background:#262626; color:#fff; border:1px solid #333; border-radius:4px; }
+    button { margin-top:20px; background:#990000; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; }
+    button[disabled] { opacity:.5; cursor:not-allowed; }
+    button:hover:not([disabled]) { background:#b30000; }
+    .status-message { margin-top:16px; text-align:center; font-weight:bold; }
+    .status-success { color:#39ff14; }
+    .status-error { color:#ff1a1a; }
+    a { color:#ff1a1a; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    footer { background:#1a1a1a; color:#888; text-align:center; padding:20px; margin-top:50px; }
+    @media (max-width:700px) {
+      .container { padding:14px; }
+      .card img { height:115px; }
+      .session-grid { gap:18px; }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Sessions with Mistress Obsidian</h1></header>
+  <div class="container">
+    <div class="session-grid">
+        <div class="card-content">
+          <h3>Obsidian Bondage Ritual</h3>
+          <p>Strict restraint with rope, leather, cuffs, and sensory deprivation. Surrender your body and mind to My artistry.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Financial Submission Ceremony</h3>
+          <p>Surrender your resources in a ritual of wealth, obedience, and pleasure. Learn the art of true financial worship.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Psychological Domination</h3>
+          <p>Mind games, mental commands, humiliation and challenge—watch as I shape your will to My desire.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Chastity & Keyholding</h3>
+          <p>Entrust Me with your release. I control your pleasure. Ritual check-ins and ultimate denial or reward.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Obedience & Discipline Training</h3>
+          <p>Spanking, caning, punishment, ritual correction, and strict protocol for those craving structure.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Verbal Humiliation & Degradation</h3>
+          <p>Language as a weapon. Taunts, exposure, and public or private humiliation crafted just for you.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Foot Worship & Bootlicking</h3>
+          <p>Devote yourself at My feet or boots. Worship, massage, and ritual cleaning by My command.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Puppy, Pet & Animal Roleplay</h3>
+          <p>Be tamed, trained, and cared for as My pet. Enter a new world of obedience and playful submission.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Forced Feminization / Sissy Training</h3>
+          <p>Transform under My gaze. Dress, act, and serve as Mistress desires—makeup, attire, posture, ritual.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Domestic Servitude</h3>
+          <p>Serve as My house slave. Cleaning, tea ceremony, service tasks, and full attention to detail.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Public/Private Rituals</h3>
+          <p>Formal collaring, oath-taking, obedience ceremonies. Enter the sacred ritual of submission.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Impact Play</h3>
+          <p>Spanking, flogging, paddling, caning—expertly delivered for catharsis, punishment, or pleasure.</p>
+        </div>
+      </div>
+        <div class="card-content">
+          <h3>Aftercare Sanctuary</h3>
+          <p>Gentle guidance, affirmations, and ritual aftercare to restore balance after every session.</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="session-form" action="https://formspree.io/f/xovwwowk" method="POST">
+      <h2>Request a Session</h2>
+      <label for="name">Your Slave Name:</label>
+      <input type="text" id="name" name="slaveName" required>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="session">Choose Your Desired Session:</label>
+      <select id="session" name="session" required>
+        <option value="">-- Select Session --</option>
+        <option value="Obsidian Bondage Ritual">Obsidian Bondage Ritual</option>
+        <option value="Financial Submission Ceremony">Financial Submission Ceremony</option>
+        <option value="Psychological Domination">Psychological Domination</option>
+        <option value="Chastity & Keyholding">Chastity & Keyholding</option>
+        <option value="Obedience & Discipline Training">Obedience & Discipline Training</option>
+        <option value="Verbal Humiliation & Degradation">Verbal Humiliation & Degradation</option>
+        <option value="Foot Worship & Bootlicking">Foot Worship & Bootlicking</option>
+        <option value="Pet & Animal Roleplay">Pet & Animal Roleplay</option>
+        <option value="Forced Feminization / Sissy Training">Forced Feminization / Sissy Training</option>
+        <option value="Domestic Servitude">Domestic Servitude</option>
+        <option value="Medical & Clinical Play">Medical & Clinical Play</option>
+        <option value="Public/Private Rituals">Public/Private Rituals</option>
+        <option value="Impact Play">Impact Play</option>
+        <option value="Edge Play & Psychological Limits">Edge Play & Psychological Limits</option>
+        <option value="Aftercare Sanctuary">Aftercare Sanctuary</option>
+        <option value="Custom Ceremony">Custom Ceremony</option>
+      </select>
+      <label for="details">Describe your limits & desires:</label>
+      <textarea id="details" name="details" rows="5" placeholder="Be specific and truthful..." required></textarea>
+      <button type="submit" id="submit-btn">Submit to Mistress</button>
+      <div class="status-message" id="session-status"></div>
+    </form>
+
+    <p style="text-align:center; margin-top:30px;"><a href="index.html">← Return to Home</a></p>
+  </div>
+  <footer>&copy; 2025 Mistress Obsidian. Know Your Place. Serve with Purpose.</footer>
+  <script>
+    // AJAX submit for better user experience
+    document.getElementById('session-form').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('session-status');
+      btn.disabled = true;
+      btn.textContent = "Submitting…";
+      status.textContent = "";
+      status.className = "status-message";
+      const fd = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: fd
+        });
+        if (res.ok) {
+          status.textContent = "Request sent! Mistress Obsidian will review your plea.";
+          status.classList.add('status-success');
+          form.reset();
+          btn.textContent = "Submitted";
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = "Submit to Mistress";
+            status.textContent = "";
+          }, 2000);
+        } else {
+          status.textContent = "Error sending request. Please try again.";
+          status.classList.add('status-error');
+          btn.disabled = false;
+          btn.textContent = "Submit to Mistress";
+        }
+      } catch {
+        status.textContent = "Error sending request. Please try again.";
+        status.classList.add('status-error');
+        btn.disabled = false;
+        btn.textContent = "Submit to Mistress";
+      }
+    });
+  </script>
+</body>
+</html>
