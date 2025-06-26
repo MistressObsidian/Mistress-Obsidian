@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Mistress Obsidian</title>
+  <style>
+    body { background:#0d0d0d; color:#e6e6e6; font-family:'Georgia', serif; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+    .login-box { background:#1a1a1a; padding:40px; border-radius:10px; width:350px; box-shadow:0 0 15px rgba(255,0,0,0.3);}
+    h2 { color:#ff1a1a; text-align:center; margin-bottom:30px;}
+    input { width:100%; padding:10px; margin:10px 0; background:#262626; border:1px solid #333; color:#fff; border-radius:4px;}
+    .input-group { position:relative; }
+    button { width:100%; padding:12px; background:#990000; color:#fff; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
+    button:hover { background:#b30000; }
+    .register-btn { display:inline-block; background:#990000; color:#fff; padding:12px 28px; border-radius:6px; text-decoration:none; font-weight:bold; font-size:1em; margin-top:18px; border:none; cursor:pointer; width:100%; text-align:center;}
+    .register-btn:hover { background:#b30000; }
+    .success { color:#39ff14; text-align:center; margin-top:14px; font-weight:bold;}
+    .error { color:#ff1a1a; text-align:center; margin-top:14px; font-weight:bold;}
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Submissive Login</h2>
+    <form id="login-form" autocomplete="off">
+      <input type="text" id="username" placeholder="Slave Name or Admin" required>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Obedience Code" required>
+      </div>
+      <button type="submit">Enter Sanctum</button>
+      <div id="login-status"></div>
+    </form>
+    <button class="register-btn" onclick="window.location.href='register.html'">Register as a Slave</button>
+  </div>
+  <script>
+    // Define admin credentials
+    const ADMIN_USER = "admin";
+    const ADMIN_PASS = "goddess";
+
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value.trim().toLowerCase();
+      const pass = document.getElementById('password').value.trim();
+
+      // Admin login
+      if(user === ADMIN_USER && pass === ADMIN_PASS) {
+        localStorage.setItem('authenticated','true');
+        localStorage.setItem('username',user);
+        localStorage.setItem('role','admin');
+        window.location.href = "admin.html";
+        return;
+      }
+
+      // Regular user login (from localStorage)
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      const found = users.find(u => u.username === user && u.password === pass);
+
+      if(found){
+        localStorage.setItem('authenticated','true');
+        localStorage.setItem('username',user);
+        localStorage.setItem('role',found.role);
+        // Tribute logic: Check if tributeStatus for user is set
+        const tributeStatus = JSON.parse(localStorage.getItem('tributeStatus')||'{}');
+        if(tributeStatus[user]){
+          window.location.href = "member.html";
+        } else {
+          window.location.href = "tribute.html";
+        }
+      } else {
+        showStatus("Invalid username or password.", "error");
+      }
+    });
+
+    function showStatus(msg,type='success'){
+      const el = document.getElementById('login-status');
+      el.textContent = msg;
+      el.className = type;
+    }
+  </script>
+</body>
+</html>
